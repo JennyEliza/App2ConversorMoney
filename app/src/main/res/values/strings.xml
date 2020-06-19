@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Conversor Money</string>
+    <string name="titulo">Conversión de Monedas</string>
+    <string name="description">Selescciona la moneda a convertir y por cual quieres hacerlo.</string>
+    <string name="importe">IMPORTE</string>
+    <string name="valor">Valor</string>
+    <string name="bandera">Bandera</string>
+    <string name="desc2">Conversor</string>
+    <string name="convertir">Convertir</string>
+
+    <string-array name="lista_monedas">
+        <item>COP - Peso Colombiano</item>
+        <item>USD - US Dólar</item>
+        <item>EUR - Euro</item>
+    </string-array>
+
+</resources>
