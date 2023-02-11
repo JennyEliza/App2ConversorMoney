@@ -42,7 +42,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: java-app
-
+     
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
@@ -51,3 +51,19 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D3576DA26E624D809FFE6D5ABBFB3307 }}
           package: '*.jar'
+      - name: Step 1  - Checkut mail branch from GitHub
+        uses: actions/checkout@2
+        
+      - name: Step 2 - Set up JDK 1.8
+        uses: actions/setup-java@1
+        with:
+          java-version: '8' 
+  
+      - name: Step 3 - Have GitHub Actions Build Maven Project
+        run: mvn -B package --file pom.xml
+      - name: Step 4 - List the current directory
+        run: 1s -a
+      - name: Step 5 - What is in the target folde?
+        run: 
+         cd target
+         1s -a
